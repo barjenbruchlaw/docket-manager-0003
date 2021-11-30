@@ -1,12 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import './index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import Search from './pages/search.js'
+import Addcase from './pages/addcase'
+import SystemMaintenance from './pages/systemMaintenance.js'
+import Settings from './pages/settings.js'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='search' element={<Search />} />
+        <Route path='addcase' element={<Addcase />} />
+        <Route path='systemMaintenance' element={<SystemMaintenance />} />
+        <Route path='settings' element={<Settings />} />
+      </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
