@@ -23,7 +23,7 @@ const users = [
         canCreateUser: true,
         canCreateInvoice: true,
         isAdmin: true,
-        dateCreated: 2021-11-30,
+        dateCreated: '11-30-2021',
 
     },
     {
@@ -50,7 +50,7 @@ const users = [
         canCreateUser: true,
         canCreateInvoice: true,
         isAdmin: false,
-        dateCreated: 2021-11-30,
+        dateCreated: '11-30-2021',
 
     },
     {
@@ -77,7 +77,7 @@ const users = [
         canCreateUser: true,
         canCreateInvoice: false,
         isAdmin: false,
-        dateCreated: 2021-11-30,
+        dateCreated: '11-30-2021',
 
     },
     {
@@ -104,7 +104,7 @@ const users = [
         canCreateUser: false,
         canCreateInvoice: false,
         isAdmin: false,
-        dateCreated: 2021-11-30,
+        dateCreated: '11-30-2021',
 
     }
 ]

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Tabs, Tab, Button } from 'react-bootstrap'
 import PageNavBar from '../components/PageNavBar'
+import UserTable from './userTable'
 import './pages.css'
 
 const SystemMaintenance = () => {
@@ -25,6 +26,8 @@ const SystemMaintenance = () => {
             <Tab eventKey='user' title='Users' className='p-3'>
 
                 <Button variant='dark'>Add new user</Button>
+
+                <UserTable />
 
             </Tab>
             <Tab eventKey='jurisdiction' title='Jurisdictions' className='p-3'>Jurisdictions:</Tab>
