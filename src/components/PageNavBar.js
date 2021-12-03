@@ -24,9 +24,9 @@ const PageNavBar = () => {
       <Nav.Link className='SidebarItem mt-5' as={Link} to="/"><HouseDoorFill /> Dashboard</Nav.Link>
       <Nav.Link className='SidebarItem' as={Link} to="/search"><Search /> Search for a case</Nav.Link>
       <Nav.Link className='SidebarItem' as={Link} to="/addcase"><BookmarkCheck /> Add and accept new cases</Nav.Link>
-      <Nav.Link className='SidebarItem' href="#" disabled><FolderFill /> File case with court</Nav.Link>
-      <Nav.Link className='SidebarItem' href="#" disabled><ListCheck /> Prepare docket for court</Nav.Link>
-      <Nav.Link className='SidebarItem' href="#" disabled><CurrencyDollar /> Prepare invoices</Nav.Link>
+      <Nav.Link className='SidebarItem' as={Link} to="/" disabled><FolderFill /> File case with court</Nav.Link>
+      <Nav.Link className='SidebarItem' as={Link} to="/" disabled><ListCheck /> Prepare docket for court</Nav.Link>
+      <Nav.Link className='SidebarItem' as={Link} to="/" disabled><CurrencyDollar /> Prepare invoices</Nav.Link>
       <Nav.Link className='SidebarItem' as={Link} to="/systemMaintenance"><Gear /> System Maintenance</Nav.Link>
       <Nav.Link className='SidebarItem' as={Link} to="/settings"><GearFill /> Settings</Nav.Link>
  

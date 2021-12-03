@@ -9,7 +9,7 @@ const Addcase = () => {
 
         <header className='page-header'><Container><Row>
         <Col><h1>Docket Manager v. 0.3</h1></Col>
-        <Col className='text-end mt-auto'>Signed in as <a href='#' style={{ color: 'white' }}>Brian Barjenbruch</a></Col>
+        <Col className='text-end mt-auto'>Signed in as <a href='/' style={{ color: 'white' }}>Brian Barjenbruch</a></Col>
         </Row></Container></header>
             
         <sidebar className='page-sidebar'>
