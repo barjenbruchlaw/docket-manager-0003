@@ -5,6 +5,7 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import Search from './pages/search.js'
+import CreateDocuments from './pages/createDocuments.js'
 import Addcase from './pages/addcase'
 import SystemMaintenance from './pages/systemMaintenance.js'
 import Settings from './pages/settings.js'
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route path='/' element={<App />} />
         <Route path='search' element={<Search />} />
         <Route path='addcase' element={<Addcase />} />
+        <Route path='createDocuments' element={<CreateDocuments />} />
         <Route path='systemMaintenance' element={<SystemMaintenance />} />
         <Route path='settings' element={<Settings />} />
       </Routes>
