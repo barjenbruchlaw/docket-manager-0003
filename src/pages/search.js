@@ -13,9 +13,9 @@ const Search = () => {
             </Row></Container></header> 
 
 
-            <sidebar className='page-sidebar'>
+            <div className='page-sidebar'>
             <PageNavBar />
-            </sidebar>
+            </div>
 
             <main className='page-main'>
 

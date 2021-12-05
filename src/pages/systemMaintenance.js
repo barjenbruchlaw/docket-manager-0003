@@ -4,7 +4,10 @@ import PageNavBar from '../components/PageNavBar'
 import UserTable from './userTable'
 import './pages.css'
 
+
+
 const SystemMaintenance = () => {
+
     return (
         <div className='grid-container'>
 
@@ -13,9 +16,9 @@ const SystemMaintenance = () => {
             <Col Col className='text-end mt-auto'>Signed in as <a href='/' style={{ color: 'white' }}>Brian Barjenbruch</a></Col>
             </Row></Container></header>
 
-            <sidebar className='page-sidebar'>
+            <div className='page-sidebar'>
             <PageNavBar />
-            </sidebar>
+            </div>
 
             <main className='page-main'>
             
