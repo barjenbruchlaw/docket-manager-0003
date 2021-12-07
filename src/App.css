@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-columns: 15vw minmax(80vw, 80vw);
+  grid-template-columns: 10vw minmax(90vw, 90vw);
   grid-template-rows: 5vh minmax(90vh, 90vh);
 }
 

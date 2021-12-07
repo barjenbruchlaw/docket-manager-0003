@@ -7,3 +7,15 @@
   color: black;
   font-weight: 900;
 }
+
+.page-header {
+  z-index: 10;
+}
+
+.page-sidebar {
+  z-index: 8;
+}
+
+.page-main {
+  margin-left: 10vw;
+}

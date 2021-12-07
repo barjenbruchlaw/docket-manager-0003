@@ -17,12 +17,12 @@ const SystemMaintenance = () => {
 
             <header className='page-header'><Container><Row>
             <Col><h1>Docket Manager v. 0.3</h1></Col>
-            <Col Col className='text-end mt-auto'>Signed in as <a href='/' style={{ color: 'white' }}>Brian Barjenbruch</a></Col>
+            <Col className='text-end mt-auto'>Signed in as <a href='/' style={{ color: 'white' }}>Brian Barjenbruch</a></Col>
             </Row></Container></header>
 
-            <sidebar className='page-sidebar'>
+            <div className='page-sidebar'>
             <PageNavBar />
-            </sidebar>
+            </div>
 
             <main className='page-main'>
             
@@ -114,7 +114,7 @@ const SystemMaintenance = () => {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="dark" onClick={handleClose}>
                         Save Changes
                     </Button>
                     </Modal.Footer>
