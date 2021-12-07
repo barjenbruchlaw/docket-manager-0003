@@ -22,7 +22,7 @@ const UserTable = () => {
     const rowData = [...users]
     
     return (
-        <div className="ag-theme-alpine" style={{height: '60vh', width: '75vw'}}>
+        <div className="ag-theme-alpine" style={{height: 600, width: 1500}}>
         <AgGridReact
             rowData={rowData}>
             <AgGridColumn field="company" width='260'></AgGridColumn>
