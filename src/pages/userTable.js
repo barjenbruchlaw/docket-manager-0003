@@ -20,14 +20,18 @@ const handleDeleteClick = () => {
 const UserTable = () => {
 
     const rowData = [...users]
+    const nameGetter = (params) => {return params.data.firstName + ' ' + params.data.lastName}
+    const editButtonFunction = (params) => {return <Button variant='dark' onClick = {handleEditClick}>Edit</Button>}
+    const deleteButtonFunction = (params) => {return <Button variant='dark' onClick = {handleDeleteClick}>Delete</Button>}
     
     return (
         <div className="ag-theme-alpine" style={{height: '60vh', width: '75vw'}}>
         <AgGridReact
             rowData={rowData}>
             <AgGridColumn field="company" width='260'></AgGridColumn>
-            <AgGridColumn field="firstName" width='160'></AgGridColumn>
-            <AgGridColumn field="lastName" width='160'></AgGridColumn>
+            <AgGridColumn headerName='Name' field='name' width='160'
+            valueGetter={nameGetter}
+            ></AgGridColumn>
             <AgGridColumn field="email" width='260'></AgGridColumn>
             <AgGridColumn field='isPropertyManager' headerName="PM" width='80'
                 cellRendererFramework={(params) => 
@@ -42,23 +46,12 @@ const UserTable = () => {
                 {if (params.value===true){return <CheckCircleFill className='text-center' />}else{return ''}}}>
             </AgGridColumn>
             <AgGridColumn field="dateCreated" width='150'></AgGridColumn>
-            <AgGridColumn field="edit" width='100' cellRendererFramework={(props) => {
-                return <Button variant='dark' onClick = {
-                  handleEditClick
-                } > Edit < /Button>
-              }} ></AgGridColumn>
-            <AgGridColumn field="delete" width='100' cellRendererFramework={(props) => {
-                return <Button variant='dark' onClick = {
-                  handleDeleteClick
-                } > Delete < /Button>
-              }} ></AgGridColumn>
+            <AgGridColumn field="edit" width='100' cellRendererFramework={editButtonFunction}></AgGridColumn>
+            <AgGridColumn field="delete" width='100' cellRendererFramework={deleteButtonFunction}></AgGridColumn>
             
         </AgGridReact>
 
         </div>
     )
 }
-
-
-
 export default UserTable
