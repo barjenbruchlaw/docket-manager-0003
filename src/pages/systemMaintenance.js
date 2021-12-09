@@ -7,10 +7,10 @@ import './pages.css'
 
 const SystemMaintenance = () => {
 
-    const [show, setShow] = useState(false);
+    const [showAddUser, setShowAddUser] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleAddUserClose = () => setShowAddUser(false);
+    const handleAddUserShow = () => setShowAddUser(true);
 
     return (
         <div className='grid-container'>
@@ -32,10 +32,10 @@ const SystemMaintenance = () => {
             <Tab eventKey='owner' title='Property Owners' className='p-3'>Owners:</Tab>
             <Tab eventKey='user' title='Users' className='p-3'>
 
-                <Button variant='dark' onClick={handleShow}>Add new user</Button>
+                <Button variant='dark' onClick={handleAddUserShow}>Add new user</Button>
 
 
-                <Modal show={show} onHide={handleClose} size='lg'>
+                <Modal show={showAddUser} onHide={handleAddUserClose} size='lg'>
 
                     <Modal.Header closeButton>
                     <Modal.Title>Add new user</Modal.Title>
@@ -112,10 +112,10 @@ const SystemMaintenance = () => {
 
                     </Modal.Body>
                     <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={handleAddUserClose}>
                         Close
                     </Button>
-                    <Button variant="dark" onClick={handleClose}>
+                    <Button variant="dark" onClick={handleAddUserClose}>
                         Save Changes
                     </Button>
                     </Modal.Footer>
