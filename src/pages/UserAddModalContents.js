@@ -1,30 +1,21 @@
 import React from 'react'
-import { useState } from 'react'
-import { Button, Modal, InputGroup, FormControl, Form } from 'react-bootstrap'
+import { Modal, InputGroup, FormControl, Form } from 'react-bootstrap'
 
 
-const UserAddModal = () => {
-
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+const UserAddModalContents = () => {
 
     return (
         <>
-
-                    <Modal.Header closeButton>
-                    <Modal.Title>Add new user</Modal.Title>
-                    </Modal.Header>
+                    
                     <Modal.Body>
 
-                    <InputGroup className="mb-3">
-                        <FormControl
+                    <InputGroup className="mb-3 py-1">
+                        <FormControl 
                         placeholder="First Name"
                         aria-label="firstName"
                         aria-describedby="basic-addon1"
                         />
-                        <FormControl
+                        <FormControl 
                         placeholder="Last Name"
                         aria-label="lastName"
                         aria-describedby="basic-addon1"
@@ -32,14 +23,14 @@ const UserAddModal = () => {
                         className='ml-3'
                         />
                     </InputGroup>
-                    <InputGroup className="mb-3">
+                    <InputGroup className="mb-3 py-1">
                         <FormControl
                         placeholder="Street Address"
                         aria-label="streetAddress"
                         aria-describedby="basic-addon1"
                         />
                     </InputGroup>
-                    <InputGroup className="mb-3">
+                    <InputGroup className="mb-3 py-1">
                         <FormControl
                         placeholder="City"
                         aria-label="city"
@@ -72,14 +63,26 @@ const UserAddModal = () => {
                         />
                     </InputGroup>
 
-                    <Form>
+                    <Form className='py-3'>
                     <Form.Check inline name='jobTitle' type='radio' id='isAttorney' label='Attorney' />
                     <Form.Check inline name='jobTitle' type='radio' id='isParalegal' label='Paralegal' />
                     <Form.Check inline name='jobTitle' type='radio' id='isPropertyManager' label='Property Manager' />
-                    <Form.Check inline name='jobTitle' type='radio' id='isPMManager' label='Supervisor' />
+                    <Form.Check inline name='jobTitle' type='radio' id='isPMManager' label='Property Manager Supervisor' />
                     </Form>
 
-                    <Form.Select aria-label="Default select example">
+                    <Form className='py-3'>
+                        <Form.Check inline name='requestEviction' type='switch' id='canRequestEviction' label='Request eviction?' />
+                        <Form.Check inline name='requestDismiss' type='switch' id='canRequestDismiss' label='Request dismissal?' />
+                        <Form.Check inline name='requestWrit' type='switch' id='canRequestWrit' label='Request writ?' />
+                        <Form.Check inline name='UpdateCase' type='switch' id='canUpdateCase' label='Update Case?' />
+                    </Form>
+                    <Form className='py-3'>
+                        <Form.Check inline name='CreatePM' type='switch' id='canCreatePM' label='Create Property Manager?' />
+                        <Form.Check inline name='CreateOwner' type='switch' id='canCreateOwner' label='Create Owner?' />
+                        <Form.Check inline name='CreateUser' type='switch' id='canCreateUser' label='Create User?' />
+                    </Form>
+
+                    <Form.Select aria-label="select company">
                     <option>Company</option>
                     <option value="1">Bassin and Barjenbruch, LLC</option>
                     <option value="2">Prism Real Estate Services</option>
@@ -87,17 +90,9 @@ const UserAddModal = () => {
                     </Form.Select>
 
                     </Modal.Body>
-                    <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="dark" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                    </Modal.Footer>
             
         </>
     )
 }
 
-export default UserAddModal
+export default UserAddModalContents
