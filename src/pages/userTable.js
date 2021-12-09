@@ -30,16 +30,16 @@ const UserTable = () => {
         <div className="ag-theme-alpine" style={{height: '60vh', width: '75vw'}}>
         <AgGridReact
             rowData={rowData}>
-            <AgGridColumn field="company" flex='11'></AgGridColumn>
-            <AgGridColumn headerName='Name' field='name' flex='7'
+            <AgGridColumn field="company" sortable flex='11'></AgGridColumn>
+            <AgGridColumn headerName='Name' sortable field='name' flex='7'
             valueGetter={nameGetter}
             ></AgGridColumn>
             <AgGridColumn field="email" flex='10'></AgGridColumn>
-            <AgGridColumn field='isPropertyManager' headerName="PM" flex='3'
+            <AgGridColumn field='isPropertyManager' sortable headerName="PM" flex='3'
                 cellRendererFramework={checkMarkSetter}></AgGridColumn>
-            <AgGridColumn field='isAttorney' headerName="Atty" flex='3' 
+            <AgGridColumn field='isAttorney' sortable headerName="Atty" flex='3' 
                 cellRendererFramework={checkMarkSetter}></AgGridColumn>
-            <AgGridColumn field='isParalegal' headerName="Para" flex='3' 
+            <AgGridColumn field='isParalegal' sortable headerName="Para" flex='3' 
                 cellRendererFramework={checkMarkSetter}></AgGridColumn>
             <AgGridColumn field="edit" flex='4' cellRendererFramework={editButtonFunction}></AgGridColumn>
             <AgGridColumn field="delete" flex='4' cellRendererFramework={deleteButtonFunction}></AgGridColumn>
