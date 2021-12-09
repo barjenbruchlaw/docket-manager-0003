@@ -30,8 +30,8 @@ const UserTable = () => {
         <div className="ag-theme-alpine" style={{height: '60vh', width: '75vw'}}>
         <AgGridReact
             rowData={rowData}>
-            <AgGridColumn field="company" flex='10'></AgGridColumn>
-            <AgGridColumn headerName='Name' field='name' flex='10'
+            <AgGridColumn field="company" flex='11'></AgGridColumn>
+            <AgGridColumn headerName='Name' field='name' flex='7'
             valueGetter={nameGetter}
             ></AgGridColumn>
             <AgGridColumn field="email" flex='10'></AgGridColumn>
