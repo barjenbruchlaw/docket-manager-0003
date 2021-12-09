@@ -22,27 +22,27 @@ const UserTable = () => {
 
     const rowData = [...users]
     const nameGetter = (params) => {return params.data.firstName + ' ' + params.data.lastName}
-    const checkMarkSetter = (params) => {if (params.value===true){return <CheckCircleFill className='text-center'/>}else{return ''}}
-    const editButtonFunction = (params) => {return <Button variant='dark' onClick = {handleEditClick}>Edit</Button>}
-    const deleteButtonFunction = (params) => {return <Button variant='dark' onClick = {handleDeleteClick}>Delete</Button>}
+    const checkMarkSetter = (params) => {if (params.value===true){return <h4><CheckCircleFill className='text-center'/></h4>}else{return ''}}
+    const editButtonFunction = (params) => {return <Button variant='dark' size='sm' onClick = {handleEditClick}>Edit</Button>}
+    const deleteButtonFunction = (params) => {return <Button variant='dark' size='sm' onClick = {handleDeleteClick}>Delete</Button>}
     
     return (
         <div className="ag-theme-alpine" style={{height: '60vh', width: '75vw'}}>
         <AgGridReact
             rowData={rowData}>
-            <AgGridColumn field="company" flex='3'></AgGridColumn>
-            <AgGridColumn headerName='Name' field='name' flex='2'
+            <AgGridColumn field="company" flex='10'></AgGridColumn>
+            <AgGridColumn headerName='Name' field='name' flex='10'
             valueGetter={nameGetter}
             ></AgGridColumn>
-            <AgGridColumn field="email" flex='3'></AgGridColumn>
-            <AgGridColumn field='isPropertyManager' headerName="PM" flex='1'
+            <AgGridColumn field="email" flex='10'></AgGridColumn>
+            <AgGridColumn field='isPropertyManager' headerName="PM" flex='3'
                 cellRendererFramework={checkMarkSetter}></AgGridColumn>
-            <AgGridColumn field='isAttorney' headerName="Atty" flex='1' 
+            <AgGridColumn field='isAttorney' headerName="Atty" flex='3' 
                 cellRendererFramework={checkMarkSetter}></AgGridColumn>
-            <AgGridColumn field='isParalegal' headerName="Para" flex='1' 
+            <AgGridColumn field='isParalegal' headerName="Para" flex='3' 
                 cellRendererFramework={checkMarkSetter}></AgGridColumn>
-            <AgGridColumn field="edit" flex='2' cellRendererFramework={editButtonFunction}></AgGridColumn>
-            <AgGridColumn field="delete" flex='2' cellRendererFramework={deleteButtonFunction}></AgGridColumn>
+            <AgGridColumn field="edit" flex='4' cellRendererFramework={editButtonFunction}></AgGridColumn>
+            <AgGridColumn field="delete" flex='4' cellRendererFramework={deleteButtonFunction}></AgGridColumn>
             
         </AgGridReact>
 
