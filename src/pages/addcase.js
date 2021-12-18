@@ -2,6 +2,7 @@ import React from 'react'
 import PageNavBar from '../components/PageNavBar'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../App.css'
+import AddCasePage1 from './AddCasePage1'
 
 const Addcase = () => {
     return (
@@ -17,7 +18,10 @@ const Addcase = () => {
         </div>
 
         <main className='page-main'>
-        <h1 className='text-center'>Add Case</h1>
+        <h1 className='py-4'>Add a new case:</h1>
+        
+        <AddCasePage1 />
+        
         </main>
 
     </div>
